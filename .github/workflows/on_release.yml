@@ -28,15 +28,12 @@ jobs:
         (cd ..; tar cvfz zbar-ubuntu-20.04.tar.gz *deb)
 
     - name: upload
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      uses: mchehab/upload-release-asset@v1.0.3
+      uses: actions/upload-artifact@v4.3.4
+      
       with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ../zbar-ubuntu-20.04.tar.gz
-        asset_name: zbar-ubuntu-20.04.tar.gz
-        asset_content_type: application/gzip
-
+        name: zbar-ubuntu-20.04.tar.gz
+        path: |
+              *.gz
   Mac_OS:
     name: Build for Mac OS
     runs-on: macos-latest
