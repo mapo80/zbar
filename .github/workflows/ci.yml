@@ -1,11 +1,7 @@
 name: CI
 
 # Should run only on branches and PR, as "on_tag.yml" will handle tags
-on:
-  push:
-    branches: master test
-  pull_request:
-    branches: master
+on: workflow_dispatch
 
 jobs:
 
