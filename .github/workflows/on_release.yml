@@ -1,13 +1,6 @@
 name: Upload binaries to release
 
-on:
-  release:
-    types:
-      - created
-      - published
-      - edited
-
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   Ubuntu:
