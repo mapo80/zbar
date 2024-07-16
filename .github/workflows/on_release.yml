@@ -33,7 +33,7 @@ jobs:
       with:
         name: zbar-ubuntu-20.04.tar.gz
         path: |
-              *.gz
+              ../zbar-ubuntu-20.04.tar.gz
   Mac_OS:
     name: Build for Mac OS
     runs-on: macos-latest
